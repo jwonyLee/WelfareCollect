@@ -1,10 +1,3 @@
-//
-//  Item.swift
-//  WelfareCollect
-//
-//  Created by rieul on 2024-07-12.
-//
-
 import Foundation
 import SwiftData
 
@@ -14,5 +7,14 @@ final class Item {
     
     init(timestamp: Date) {
         self.timestamp = timestamp
+    }
+}
+
+@Model
+final class Bookmark {
+    var serviceID: String
+
+    init(serviceID: String) {
+        self.serviceID = serviceID
     }
 }

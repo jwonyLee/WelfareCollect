@@ -8,23 +8,92 @@
 
 /* Begin PBXBuildFile section */
 		BA311A322C4142B2001865D0 /* WelfareCollectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA311A312C4142B2001865D0 /* WelfareCollectApp.swift */; };
-		BA311A342C4142B2001865D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA311A332C4142B2001865D0 /* ContentView.swift */; };
+		BA311A342C4142B2001865D0 /* WelfareListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA311A332C4142B2001865D0 /* WelfareListView.swift */; };
 		BA311A362C4142B2001865D0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA311A352C4142B2001865D0 /* Item.swift */; };
 		BA311A382C4142B3001865D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA311A372C4142B3001865D0 /* Assets.xcassets */; };
 		BA311A3B2C4142B3001865D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA311A3A2C4142B3001865D0 /* Preview Assets.xcassets */; };
+		BA311A482C414322001865D0 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = BA311A472C414322001865D0 /* GoogleMobileAds */; };
+		BA311A4A2C41432E001865D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA311A492C41432E001865D0 /* GoogleService-Info.plist */; };
+		BA8047CC2C46BCDD00DF0673 /* WelfareListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047CB2C46BCDD00DF0673 /* WelfareListRequest.swift */; };
+		BA8047CF2C4809CA00DF0673 /* WelfareDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047CE2C4809CA00DF0673 /* WelfareDetailView.swift */; };
+		BA8047D22C4EAED900DF0673 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047D12C4EAED900DF0673 /* Category.swift */; };
+		BA8047D42C4EAFDE00DF0673 /* LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047D32C4EAFDE00DF0673 /* LifeCycle.swift */; };
+		BA8047D62C4EAFF900DF0673 /* HouseholdCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047D52C4EAFF900DF0673 /* HouseholdCondition.swift */; };
+		BA8047D82C4EB00C00DF0673 /* InterestTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047D72C4EB00C00DF0673 /* InterestTheme.swift */; };
+		BA8047DA2C4EB02600DF0673 /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047D92C4EB02600DF0673 /* ServiceType.swift */; };
+		BA8047DC2C4EB03300DF0673 /* SearchCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047DB2C4EB03300DF0673 /* SearchCategory.swift */; };
+		BA8047DE2C4EB04000DF0673 /* SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047DD2C4EB04000DF0673 /* SortOrder.swift */; };
+		BA8047E12C4EB08D00DF0673 /* ListOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8047E02C4EB08D00DF0673 /* ListOption.swift */; };
+		BA87CA742C414729008863D8 /* WelfareListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA732C414729008863D8 /* WelfareListResponse.swift */; };
+		BA87CA7C2C41477A008863D8 /* WelfareCollectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA7B2C41477A008863D8 /* WelfareCollectTests.swift */; };
+		BA87CA842C4147C9008863D8 /* SampleDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA832C4147C9008863D8 /* SampleDatas.swift */; };
+		BA87CA872C414974008863D8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BA87CA862C414974008863D8 /* FirebaseAnalytics */; };
+		BA87CA892C414974008863D8 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BA87CA882C414974008863D8 /* FirebaseCrashlytics */; };
+		BA87CA8C2C414BAD008863D8 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = BA87CA8B2C414BAD008863D8 /* XMLCoder */; };
+		BA87CA8E2C4152A7008863D8 /* WelfareDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA8D2C4152A7008863D8 /* WelfareDetailResponse.swift */; };
+		BA87CA912C4155E2008863D8 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA902C4155E2008863D8 /* BannerView.swift */; };
+		BA87CA932C415DAF008863D8 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA922C415DAF008863D8 /* Sample.swift */; };
+		BA87CA952C416B22008863D8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA942C416B22008863D8 /* RootView.swift */; };
+		BA87CA972C4172DF008863D8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA962C4172DF008863D8 /* HomeScreen.swift */; };
+		BA87CA992C4173AB008863D8 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA982C4173AB008863D8 /* SettingsScreen.swift */; };
+		BA87CA9C2C4173D3008863D8 /* BookmarkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA87CA7D2C41477A008863D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA311A262C4142B2001865D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA311A2D2C4142B2001865D0;
+			remoteInfo = WelfareCollect;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BA311A2E2C4142B2001865D0 /* WelfareCollect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WelfareCollect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA311A312C4142B2001865D0 /* WelfareCollectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelfareCollectApp.swift; sourceTree = "<group>"; };
-		BA311A332C4142B2001865D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BA311A332C4142B2001865D0 /* WelfareListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelfareListView.swift; sourceTree = "<group>"; };
 		BA311A352C4142B2001865D0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		BA311A372C4142B3001865D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA311A3A2C4142B3001865D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA311A492C41432E001865D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA311A4B2C4143CE001865D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BA8047CB2C46BCDD00DF0673 /* WelfareListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelfareListRequest.swift; sourceTree = "<group>"; };
+		BA8047CE2C4809CA00DF0673 /* WelfareDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelfareDetailView.swift; sourceTree = "<group>"; };
+		BA8047D12C4EAED900DF0673 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BA8047D32C4EAFDE00DF0673 /* LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycle.swift; sourceTree = "<group>"; };
+		BA8047D52C4EAFF900DF0673 /* HouseholdCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdCondition.swift; sourceTree = "<group>"; };
+		BA8047D72C4EB00C00DF0673 /* InterestTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestTheme.swift; sourceTree = "<group>"; };
+		BA8047D92C4EB02600DF0673 /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
+		BA8047DB2C4EB03300DF0673 /* SearchCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategory.swift; sourceTree = "<group>"; };
+		BA8047DD2C4EB04000DF0673 /* SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrder.swift; sourceTree = "<group>"; };
+		BA8047E02C4EB08D00DF0673 /* ListOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOption.swift; sourceTree = "<group>"; };
+		BA87CA732C414729008863D8 /* WelfareListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelfareListResponse.swift; sourceTree = "<group>"; };
+		BA87CA792C41477A008863D8 /* WelfareCollectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WelfareCollectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA87CA7B2C41477A008863D8 /* WelfareCollectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelfareCollectTests.swift; sourceTree = "<group>"; };
+		BA87CA832C4147C9008863D8 /* SampleDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleDatas.swift; sourceTree = "<group>"; };
+		BA87CA8D2C4152A7008863D8 /* WelfareDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelfareDetailResponse.swift; sourceTree = "<group>"; };
+		BA87CA902C4155E2008863D8 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		BA87CA922C415DAF008863D8 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		BA87CA942C416B22008863D8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		BA87CA962C4172DF008863D8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		BA87CA982C4173AB008863D8 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BA311A2B2C4142B2001865D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA87CA892C414974008863D8 /* FirebaseCrashlytics in Frameworks */,
+				BA87CA872C414974008863D8 /* FirebaseAnalytics in Frameworks */,
+				BA87CA8C2C414BAD008863D8 /* XMLCoder in Frameworks */,
+				BA311A482C414322001865D0 /* GoogleMobileAds in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA87CA762C41477A008863D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				BA311A302C4142B2001865D0 /* WelfareCollect */,
+				BA87CA7A2C41477A008863D8 /* WelfareCollectTests */,
 				BA311A2F2C4142B2001865D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				BA311A2E2C4142B2001865D0 /* WelfareCollect.app */,
+				BA87CA792C41477A008863D8 /* WelfareCollectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,8 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				BA311A312C4142B2001865D0 /* WelfareCollectApp.swift */,
-				BA311A332C4142B2001865D0 /* ContentView.swift */,
-				BA311A352C4142B2001865D0 /* Item.swift */,
+				BA87CA9E2C4258B9008863D8 /* Entity */,
+				BA87CA8F2C4155D9008863D8 /* View */,
+				BA87CA722C414722008863D8 /* Model */,
+				BA311A4B2C4143CE001865D0 /* Info.plist */,
+				BA311A492C41432E001865D0 /* GoogleService-Info.plist */,
 				BA311A372C4142B3001865D0 /* Assets.xcassets */,
 				BA311A392C4142B3001865D0 /* Preview Content */,
 			);
@@ -68,6 +142,104 @@
 				BA311A3A2C4142B3001865D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA8047C92C46BC9E00DF0673 /* WelfareList */ = {
+			isa = PBXGroup;
+			children = (
+				BA8047DF2C4EB07C00DF0673 /* Option */,
+				BA87CA732C414729008863D8 /* WelfareListResponse.swift */,
+				BA8047CB2C46BCDD00DF0673 /* WelfareListRequest.swift */,
+			);
+			path = WelfareList;
+			sourceTree = "<group>";
+		};
+		BA8047CA2C46BCAA00DF0673 /* WelfareDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BA87CA8D2C4152A7008863D8 /* WelfareDetailResponse.swift */,
+			);
+			path = WelfareDetail;
+			sourceTree = "<group>";
+		};
+		BA8047CD2C4809BE00DF0673 /* WelfareDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BA8047CE2C4809CA00DF0673 /* WelfareDetailView.swift */,
+			);
+			path = WelfareDetail;
+			sourceTree = "<group>";
+		};
+		BA8047DF2C4EB07C00DF0673 /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				BA8047D32C4EAFDE00DF0673 /* LifeCycle.swift */,
+				BA8047D52C4EAFF900DF0673 /* HouseholdCondition.swift */,
+				BA8047D72C4EB00C00DF0673 /* InterestTheme.swift */,
+				BA8047D92C4EB02600DF0673 /* ServiceType.swift */,
+				BA8047DB2C4EB03300DF0673 /* SearchCategory.swift */,
+				BA8047DD2C4EB04000DF0673 /* SortOrder.swift */,
+				BA8047E02C4EB08D00DF0673 /* ListOption.swift */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
+		BA87CA722C414722008863D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA8047CA2C46BCAA00DF0673 /* WelfareDetail */,
+				BA8047C92C46BC9E00DF0673 /* WelfareList */,
+				BA87CA922C415DAF008863D8 /* Sample.swift */,
+				BA8047D12C4EAED900DF0673 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA87CA7A2C41477A008863D8 /* WelfareCollectTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA87CA822C4147BA008863D8 /* Model */,
+				BA87CA7B2C41477A008863D8 /* WelfareCollectTests.swift */,
+			);
+			path = WelfareCollectTests;
+			sourceTree = "<group>";
+		};
+		BA87CA822C4147BA008863D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA87CA832C4147C9008863D8 /* SampleDatas.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA87CA8F2C4155D9008863D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA8047CD2C4809BE00DF0673 /* WelfareDetail */,
+				BA87CA9D2C4175E6008863D8 /* WelfareList */,
+				BA87CA902C4155E2008863D8 /* BannerView.swift */,
+				BA87CA942C416B22008863D8 /* RootView.swift */,
+				BA87CA962C4172DF008863D8 /* HomeScreen.swift */,
+				BA87CA982C4173AB008863D8 /* SettingsScreen.swift */,
+				BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA87CA9D2C4175E6008863D8 /* WelfareList */ = {
+			isa = PBXGroup;
+			children = (
+				BA311A332C4142B2001865D0 /* WelfareListView.swift */,
+			);
+			path = WelfareList;
+			sourceTree = "<group>";
+		};
+		BA87CA9E2C4258B9008863D8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				BA311A352C4142B2001865D0 /* Item.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +258,33 @@
 			dependencies = (
 			);
 			name = WelfareCollect;
+			packageProductDependencies = (
+				BA311A472C414322001865D0 /* GoogleMobileAds */,
+				BA87CA862C414974008863D8 /* FirebaseAnalytics */,
+				BA87CA882C414974008863D8 /* FirebaseCrashlytics */,
+				BA87CA8B2C414BAD008863D8 /* XMLCoder */,
+			);
 			productName = WelfareCollect;
 			productReference = BA311A2E2C4142B2001865D0 /* WelfareCollect.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BA87CA782C41477A008863D8 /* WelfareCollectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA87CA7F2C41477A008863D8 /* Build configuration list for PBXNativeTarget "WelfareCollectTests" */;
+			buildPhases = (
+				BA87CA752C41477A008863D8 /* Sources */,
+				BA87CA762C41477A008863D8 /* Frameworks */,
+				BA87CA772C41477A008863D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA87CA7E2C41477A008863D8 /* PBXTargetDependency */,
+			);
+			name = WelfareCollectTests;
+			productName = WelfareCollectTests;
+			productReference = BA87CA792C41477A008863D8 /* WelfareCollectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -103,6 +299,10 @@
 					BA311A2D2C4142B2001865D0 = {
 						CreatedOnToolsVersion = 15.3;
 					};
+					BA87CA782C41477A008863D8 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = BA311A2D2C4142B2001865D0;
+					};
 				};
 			};
 			buildConfigurationList = BA311A292C4142B2001865D0 /* Build configuration list for PBXProject "WelfareCollect" */;
@@ -114,11 +314,17 @@
 				Base,
 			);
 			mainGroup = BA311A252C4142B2001865D0;
+			packageReferences = (
+				BA311A462C414322001865D0 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				BA87CA852C414974008863D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BA87CA8A2C414BAD008863D8 /* XCRemoteSwiftPackageReference "XMLCoder" */,
+			);
 			productRefGroup = BA311A2F2C4142B2001865D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BA311A2D2C4142B2001865D0 /* WelfareCollect */,
+				BA87CA782C41477A008863D8 /* WelfareCollectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +336,14 @@
 			files = (
 				BA311A3B2C4142B3001865D0 /* Preview Assets.xcassets in Resources */,
 				BA311A382C4142B3001865D0 /* Assets.xcassets in Resources */,
+				BA311A4A2C41432E001865D0 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA87CA772C41477A008863D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,13 +354,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA311A342C4142B2001865D0 /* ContentView.swift in Sources */,
+				BA87CA972C4172DF008863D8 /* HomeScreen.swift in Sources */,
+				BA8047CF2C4809CA00DF0673 /* WelfareDetailView.swift in Sources */,
+				BA8047E12C4EB08D00DF0673 /* ListOption.swift in Sources */,
+				BA311A342C4142B2001865D0 /* WelfareListView.swift in Sources */,
+				BA87CA742C414729008863D8 /* WelfareListResponse.swift in Sources */,
+				BA87CA912C4155E2008863D8 /* BannerView.swift in Sources */,
+				BA8047D62C4EAFF900DF0673 /* HouseholdCondition.swift in Sources */,
 				BA311A362C4142B2001865D0 /* Item.swift in Sources */,
+				BA87CA952C416B22008863D8 /* RootView.swift in Sources */,
 				BA311A322C4142B2001865D0 /* WelfareCollectApp.swift in Sources */,
+				BA8047D82C4EB00C00DF0673 /* InterestTheme.swift in Sources */,
+				BA8047DE2C4EB04000DF0673 /* SortOrder.swift in Sources */,
+				BA87CA932C415DAF008863D8 /* Sample.swift in Sources */,
+				BA8047DC2C4EB03300DF0673 /* SearchCategory.swift in Sources */,
+				BA87CA992C4173AB008863D8 /* SettingsScreen.swift in Sources */,
+				BA87CA8E2C4152A7008863D8 /* WelfareDetailResponse.swift in Sources */,
+				BA8047CC2C46BCDD00DF0673 /* WelfareListRequest.swift in Sources */,
+				BA87CA9C2C4173D3008863D8 /* BookmarkScreen.swift in Sources */,
+				BA8047D42C4EAFDE00DF0673 /* LifeCycle.swift in Sources */,
+				BA8047D22C4EAED900DF0673 /* Category.swift in Sources */,
+				BA8047DA2C4EB02600DF0673 /* ServiceType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA87CA752C41477A008863D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA87CA7C2C41477A008863D8 /* WelfareCollectTests.swift in Sources */,
+				BA87CA842C4147C9008863D8 /* SampleDatas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA87CA7E2C41477A008863D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA311A2D2C4142B2001865D0 /* WelfareCollect */;
+			targetProxy = BA87CA7D2C41477A008863D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BA311A3C2C4142B3001865D0 /* Debug */ = {
@@ -279,6 +528,7 @@
 				DEVELOPMENT_TEAM = F95C5R6HLY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WelfareCollect/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -289,6 +539,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.rieul.WelfareCollect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -308,6 +559,7 @@
 				DEVELOPMENT_TEAM = F95C5R6HLY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WelfareCollect/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,6 +575,42 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA87CA802C41477A008863D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F95C5R6HLY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.rieul.WelfareCollectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WelfareCollect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WelfareCollect";
+			};
+			name = Debug;
+		};
+		BA87CA812C41477A008863D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F95C5R6HLY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.rieul.WelfareCollectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WelfareCollect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WelfareCollect";
 			};
 			name = Release;
 		};
@@ -347,7 +635,66 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BA87CA7F2C41477A008863D8 /* Build configuration list for PBXNativeTarget "WelfareCollectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA87CA802C41477A008863D8 /* Debug */,
+				BA87CA812C41477A008863D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA311A462C414322001865D0 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
+		BA87CA852C414974008863D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.29.0;
+			};
+		};
+		BA87CA8A2C414BAD008863D8 /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoreOffice/XMLCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.17.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA311A472C414322001865D0 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA311A462C414322001865D0 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		BA87CA862C414974008863D8 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA87CA852C414974008863D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BA87CA882C414974008863D8 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA87CA852C414974008863D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		BA87CA8B2C414BAD008863D8 /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA87CA8A2C414BAD008863D8 /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA311A262C4142B2001865D0 /* Project object */;
 }
