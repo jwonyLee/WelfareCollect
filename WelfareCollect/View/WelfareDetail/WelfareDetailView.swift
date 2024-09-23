@@ -1,55 +1,6 @@
 import SwiftUI
 import XMLCoder
 
-public extension Color {
-    static func random(randomOpacity: Bool = false) -> Color {
-        Color(
-            red: .random(in: 0...1),
-            green: .random(in: 0...1),
-            blue: .random(in: 0...1),
-            opacity: randomOpacity ? .random(in: 0...1) : 1
-        )
-    }
-}
-
-extension Color {
-    func isLight() -> Bool {
-        return luminance() > 0.5
-    }
-}
-
-extension Color {
-    func adaptedTextColor() -> Color {
-        return isLight() ? Color.black : Color.white
-    }
-}
-
-extension Color {
-    func luminance() -> Double {
-        // 1. Convert SwiftUI Color to UIColor
-        let uiColor = UIColor(self)
-
-        // 2. Extract RGB values
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        uiColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
-
-        // 3. Compute luminance.
-        return 0.2126 * Double(red) + 0.7152 * Double(green) + 0.0722 * Double(blue)
-    }
-}
-
-extension Text {
-    func contrastText(backgroundColor: Color) -> some View {
-        var r, g, b, a: CGFloat
-        (r, g, b, a) = (0, 0, 0, 0)
-        UIColor(backgroundColor).getRed(&r, green: &g, blue: &b, alpha: &a)
-        let luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b
-        return  luminance < 0.6 ? self.foregroundColor(.white) : self.foregroundColor(.black)
-    }
-}
-
 struct WelfareDetailView: View {
     var serviceId: String
     @State var detail: WelfareDetailResponse?
@@ -84,21 +35,11 @@ struct WelfareDetailView: View {
     }
 
     private func contentView(detail: WelfareDetailResponse) -> some View {
-        let color = Color.random()
         return ZStack {
-            GeometryReader { geometry in
-                color
-                    .frame(
-                        width: geometry.size.width,
-                        height: geometry.size.height
-                    )
-            }
-
             VStack(alignment: .leading, spacing: 24) {
                 Text(detail.servNm)
                     .font(.title)
                     .bold()
-                    .foregroundStyle(color.adaptedTextColor())
 
                 HStack {
                     Text("\(detail.ctpvNm) \(detail.sggNm ?? "")")
