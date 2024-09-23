@@ -37,6 +37,7 @@
 		BA87CA972C4172DF008863D8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA962C4172DF008863D8 /* HomeScreen.swift */; };
 		BA87CA992C4173AB008863D8 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA982C4173AB008863D8 /* SettingsScreen.swift */; };
 		BA87CA9C2C4173D3008863D8 /* BookmarkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */; };
+		BAAA6BEE2CA1AF5B006252A1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA6BED2CA1AF5B006252A1 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		BA87CA962C4172DF008863D8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		BA87CA982C4173AB008863D8 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkScreen.swift; sourceTree = "<group>"; };
+		BAAA6BED2CA1AF5B006252A1 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		BA311A302C4142B2001865D0 /* WelfareCollect */ = {
 			isa = PBXGroup;
 			children = (
+				BAAA6BEC2CA1AF53006252A1 /* Extension */,
 				BA311A312C4142B2001865D0 /* WelfareCollectApp.swift */,
 				BA87CA9E2C4258B9008863D8 /* Entity */,
 				BA87CA8F2C4155D9008863D8 /* View */,
@@ -240,6 +243,14 @@
 				BA311A352C4142B2001865D0 /* Item.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		BAAA6BEC2CA1AF53006252A1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BAAA6BED2CA1AF5B006252A1 /* String+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +383,7 @@
 				BA87CA8E2C4152A7008863D8 /* WelfareDetailResponse.swift in Sources */,
 				BA8047CC2C46BCDD00DF0673 /* WelfareListRequest.swift in Sources */,
 				BA87CA9C2C4173D3008863D8 /* BookmarkScreen.swift in Sources */,
+				BAAA6BEE2CA1AF5B006252A1 /* String+.swift in Sources */,
 				BA8047D42C4EAFDE00DF0673 /* LifeCycle.swift in Sources */,
 				BA8047D22C4EAED900DF0673 /* Category.swift in Sources */,
 				BA8047DA2C4EB02600DF0673 /* ServiceType.swift in Sources */,
