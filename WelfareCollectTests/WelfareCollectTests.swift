@@ -45,4 +45,15 @@ final class WelfareCollectTests: XCTestCase {
         let decoded = try! XMLDecoder().decode(WelfareDetailResponse.self, from: SampleDatas.welfareDetail3)
         print(decoded)
     }
+
+    func test_parse_welfare_detail2() throws {
+        let decoder = XMLDecoder()
+
+        do {
+            let decoded = try decoder.decode(WelfareDetailResponse.self, from: SampleDatas.welfareDetail4)
+            print(decoded)
+        } catch {
+            XCTFail("@rieul Failure: \(error.localizedDescription)")
+        }
+    }
 }
