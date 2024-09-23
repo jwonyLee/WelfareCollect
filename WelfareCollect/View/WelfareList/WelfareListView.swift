@@ -72,7 +72,7 @@ struct WelfareListView<Option: ListOption>: View {
     private func listView() -> some View {
         List {
             ForEach(searchResults) { service in
-                NavigationLink(destination: ServiceDetailView(service: service)) {
+                NavigationLink(destination: WelfareDetailView(serviceId: service.servId ?? "")) {
                     rowView(service: service)
                         .swipeActions {
                             Button(
