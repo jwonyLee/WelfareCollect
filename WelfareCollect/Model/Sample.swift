@@ -1615,37 +1615,45 @@ enum Sample {
     <wantedDtl>
         <resultCode>0</resultCode>
         <resultMessage>SUCCESS</resultMessage>
-        <servId>WLF00004779</servId>
-        <servNm>여성청소년 생리용품 보편지원</servNm>
-        <enfcBgngYmd>20220101</enfcBgngYmd>
+        <servId>WLF00000843</servId>
+        <servNm>저소득층 여성청소년 보건위생용품 지원사업</servNm>
+        <enfcBgngYmd>20180101</enfcBgngYmd>
         <enfcEndYmd>99991231</enfcEndYmd>
-        <bizChrDeptNm>서울특별시 성동구 복지국 아동청년과</bizChrDeptNm>
+        <bizChrDeptNm>서울특별시 평생교육국 청소년정책과</bizChrDeptNm>
         <ctpvNm>서울특별시</ctpvNm>
-        <sggNm>성동구</sggNm>
-        <servDgst>여성청소년 대상 생리용품 구입비용 지원</servDgst>
+        <servDgst>저소득층 여성 청소년들에게 보건위생물품 구입비용을 지원하여 여성 청소년의 건강한 성장 및 발달을 지원하고 건강권을 보장</servDgst>
         <lifeNmArray>청소년</lifeNmArray>
+        <trgterIndvdlNmArray>저소득, 한부모·조손</trgterIndvdlNmArray>
         <sprtCycNm>반기</sprtCycNm>
-        <srvPvsnNm>실물바우처</srvPvsnNm>
-        <aplyMtdNm>방문, 인터넷</aplyMtdNm>
-        <sprtTrgtCn>성동구에 주민등록을 둔 만 11세~만 18세 여성청소년(2005년~2012년생)</sprtTrgtCn>
-        <slctCritCn>출생연도 기준(2022년 기준 2005~2012년생)</slctCritCn>
-        <alwServCn>반기별 72,000원 지원(월 12,000원)</alwServCn>
-        <aplyMtdCn>주민등록지 관할 동 주민센터 방문신청 또는 성동구 홈페이지 온라인 신청 후 동주민센터에서 카드 수령</aplyMtdCn>
-        <inqNum>2376</inqNum>
-        <lastModYmd>20230603</lastModYmd>
+        <srvPvsnNm>전자바우처(바우처)</srvPvsnNm>
+        <aplyMtdNm>방문, 인터넷, 모바일</aplyMtdNm>
+        <sprtTrgtCn>국민기초생활수급자(생계, 의료, 주거, 교육급여 수급자), 법정 차상위계층, 한부모가족지원대상에 해당하는 9~24세 여성청소년
+
+    </sprtTrgtCn>
+        <slctCritCn>기초생활수급자(생계, 의료, 주거, 교육), 차상위계층, 한부모가족지원대상에 해당하는 9~24세 여성청소년</slctCritCn>
+        <alwServCn>보건위생물품 구매비용(월 13,000원)을 국민행복카드를 통해 바우처 포인트로 지원(반기별 일괄 지급)</alwServCn>
+        <aplyMtdCn>신청방법: 읍, 면, 동주민센터 방문신청 또는 복지로 온라인 신청
+     - 신청인: 청소년 대상자 본인, 부모 등 주양육자 (단, 온라인 신청은 청소년과 세대를 같이 하는 부모, 형제, 자매, 배우자만 신청가능)</aplyMtdCn>
+        <inqNum>109156</inqNum>
+        <lastModYmd>20240726</lastModYmd>
         <inqplCtadrList>
             <wlfareInfoDtlCd>010</wlfareInfoDtlCd>
-            <wlfareInfoReldCn>02-2286-5482</wlfareInfoReldCn>
-            <wlfareInfoReldNm>성동구 아동청년과</wlfareInfoReldNm>
+            <wlfareInfoReldCn>02-2133-4130</wlfareInfoReldCn>
+            <wlfareInfoReldNm>서울시 청소년정책과</wlfareInfoReldNm>
         </inqplCtadrList>
         <baslawList>
             <wlfareInfoDtlCd>030</wlfareInfoDtlCd>
-            <wlfareInfoReldNm>서울특별시 성동구 여성청소년 생리용품 지원 조례</wlfareInfoReldNm>
+            <wlfareInfoReldNm>청소년복지 지원법 제5조 제3항</wlfareInfoReldNm>
         </baslawList>
         <basfrmList>
             <wlfareInfoDtlCd>040</wlfareInfoDtlCd>
-            <wlfareInfoReldCn>https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=2118GOWF16GOWF162118&amp;atcflSn=1</wlfareInfoReldCn>
-            <wlfareInfoReldNm>성동구 여성청소년 생리용품 보편지원 추진계획.hwp</wlfareInfoReldNm>
+            <wlfareInfoReldCn>https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20220711TTWAT0607070000740821&amp;atcflSn=1</wlfareInfoReldCn>
+            <wlfareInfoReldNm>[서식 제1호]생리대 지원 신청서.hwp</wlfareInfoReldNm>
+        </basfrmList>
+        <basfrmList>
+            <wlfareInfoDtlCd>040</wlfareInfoDtlCd>
+            <wlfareInfoReldCn>https://www.bokjiro.go.kr/ssis-tbu/CmmFileUtil/siteQnaInfoDownload.do?atcflId=20220711TTWAT0607070000740822&amp;atcflSn=1</wlfareInfoReldCn>
+            <wlfareInfoReldNm>2022년『여성청소년 보건위생물품 지원사업』운영계획.hwp</wlfareInfoReldNm>
         </basfrmList>
     </wantedDtl>
     """.data(using: .utf8)!
