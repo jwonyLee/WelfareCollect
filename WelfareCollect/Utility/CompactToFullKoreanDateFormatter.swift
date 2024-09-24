@@ -1,6 +1,6 @@
 import Foundation
 
-enum CompactToFullKoreanDateFormatter: Formatter {
+struct CompactToFullKoreanDateFormatter: DateFormattable {
     private static let compactFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd"
@@ -18,10 +18,7 @@ enum CompactToFullKoreanDateFormatter: Formatter {
     }
 
     static func date(from string: String) -> Date? {
-        if let date = compactFormatter.date(from: string) {
-            return date
-        }
-        return fullFormatter.date(from: string)
+        compactFormatter.date(from: string)
     }
 
     /// yyyyMMdd → yyyy년 MM월 dd일 으로 반환

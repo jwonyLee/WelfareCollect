@@ -37,7 +37,7 @@
 		BA87CA972C4172DF008863D8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA962C4172DF008863D8 /* HomeScreen.swift */; };
 		BA87CA992C4173AB008863D8 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA982C4173AB008863D8 /* SettingsScreen.swift */; };
 		BA87CA9C2C4173D3008863D8 /* BookmarkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */; };
-		BAAA6BF12CA2E7CE006252A1 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA6BF02CA2E7CE006252A1 /* Formatter.swift */; };
+		BAAA6BF12CA2E7CE006252A1 /* DateFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA6BF02CA2E7CE006252A1 /* DateFormattable.swift */; };
 		BAAA6BF32CA2E80F006252A1 /* CompactToFullKoreanDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA6BF22CA2E7F5006252A1 /* CompactToFullKoreanDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +81,7 @@
 		BA87CA962C4172DF008863D8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		BA87CA982C4173AB008863D8 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkScreen.swift; sourceTree = "<group>"; };
-		BAAA6BF02CA2E7CE006252A1 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		BAAA6BF02CA2E7CE006252A1 /* DateFormattable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattable.swift; sourceTree = "<group>"; };
 		BAAA6BF22CA2E7F5006252A1 /* CompactToFullKoreanDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactToFullKoreanDateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				BAAA6BF22CA2E7F5006252A1 /* CompactToFullKoreanDateFormatter.swift */,
-				BAAA6BF02CA2E7CE006252A1 /* Formatter.swift */,
+				BAAA6BF02CA2E7CE006252A1 /* DateFormattable.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -378,7 +378,7 @@
 				BA8047D62C4EAFF900DF0673 /* HouseholdCondition.swift in Sources */,
 				BA311A362C4142B2001865D0 /* Item.swift in Sources */,
 				BA87CA952C416B22008863D8 /* RootView.swift in Sources */,
-				BAAA6BF12CA2E7CE006252A1 /* Formatter.swift in Sources */,
+				BAAA6BF12CA2E7CE006252A1 /* DateFormattable.swift in Sources */,
 				BA311A322C4142B2001865D0 /* WelfareCollectApp.swift in Sources */,
 				BA8047D82C4EB00C00DF0673 /* InterestTheme.swift in Sources */,
 				BA8047DE2C4EB04000DF0673 /* SortOrder.swift in Sources */,
