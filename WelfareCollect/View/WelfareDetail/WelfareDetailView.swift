@@ -36,8 +36,8 @@ struct WelfareDetailView: View {
             List {
                 Section("기본 정보") {
                     rowView(title: "지역", description: "\(detail.ctpvNm) \(detail.sggNm ?? "")")
-                    if let startDate = detail.enfcBgngYmd.toFormattedDate(),
-                       let endDate = detail.enfcEndYmd.toFormattedDate() {
+                    if let startDate = CompactToFullKoreanDateFormatter.compactToFull(from: detail.enfcBgngYmd),
+                       let endDate = CompactToFullKoreanDateFormatter.compactToFull(from: detail.enfcEndYmd) {
                         rowView(title: "시행 기간", description: "\(startDate) ~ \(endDate)")
                     } else {
                         rowView(title: "시행 기간", description: "\(detail.enfcBgngYmd) ~ \(detail.enfcEndYmd)")
@@ -104,7 +104,10 @@ struct WelfareDetailView: View {
 
                 Section("기타 정보") {
                     rowView(title: "조회수", description: detail.inqNum)
-                    rowView(title: "최종수정일자", description: detail.lastModYmd)
+                    rowView(
+                        title: "최종수정일자",
+                        description: CompactToFullKoreanDateFormatter.compactToFull(from: detail.lastModYmd) ?? ""
+                    )
                 }
             }
         }

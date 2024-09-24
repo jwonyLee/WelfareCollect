@@ -37,7 +37,8 @@
 		BA87CA972C4172DF008863D8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA962C4172DF008863D8 /* HomeScreen.swift */; };
 		BA87CA992C4173AB008863D8 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA982C4173AB008863D8 /* SettingsScreen.swift */; };
 		BA87CA9C2C4173D3008863D8 /* BookmarkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */; };
-		BAAA6BEE2CA1AF5B006252A1 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA6BED2CA1AF5B006252A1 /* String+.swift */; };
+		BAAA6BF12CA2E7CE006252A1 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA6BF02CA2E7CE006252A1 /* Formatter.swift */; };
+		BAAA6BF32CA2E80F006252A1 /* CompactToFullKoreanDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA6BF22CA2E7F5006252A1 /* CompactToFullKoreanDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +81,8 @@
 		BA87CA962C4172DF008863D8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		BA87CA982C4173AB008863D8 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkScreen.swift; sourceTree = "<group>"; };
-		BAAA6BED2CA1AF5B006252A1 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		BAAA6BF02CA2E7CE006252A1 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		BAAA6BF22CA2E7F5006252A1 /* CompactToFullKoreanDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactToFullKoreanDateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +128,7 @@
 		BA311A302C4142B2001865D0 /* WelfareCollect */ = {
 			isa = PBXGroup;
 			children = (
-				BAAA6BEC2CA1AF53006252A1 /* Extension */,
+				BAAA6BEF2CA2E7C4006252A1 /* Utility */,
 				BA311A312C4142B2001865D0 /* WelfareCollectApp.swift */,
 				BA87CA9E2C4258B9008863D8 /* Entity */,
 				BA87CA8F2C4155D9008863D8 /* View */,
@@ -245,12 +247,13 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		BAAA6BEC2CA1AF53006252A1 /* Extension */ = {
+		BAAA6BEF2CA2E7C4006252A1 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				BAAA6BED2CA1AF5B006252A1 /* String+.swift */,
+				BAAA6BF22CA2E7F5006252A1 /* CompactToFullKoreanDateFormatter.swift */,
+				BAAA6BF02CA2E7CE006252A1 /* Formatter.swift */,
 			);
-			path = Extension;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAA6BF32CA2E80F006252A1 /* CompactToFullKoreanDateFormatter.swift in Sources */,
 				BA87CA972C4172DF008863D8 /* HomeScreen.swift in Sources */,
 				BA8047CF2C4809CA00DF0673 /* WelfareDetailView.swift in Sources */,
 				BA8047E12C4EB08D00DF0673 /* ListOption.swift in Sources */,
@@ -374,6 +378,7 @@
 				BA8047D62C4EAFF900DF0673 /* HouseholdCondition.swift in Sources */,
 				BA311A362C4142B2001865D0 /* Item.swift in Sources */,
 				BA87CA952C416B22008863D8 /* RootView.swift in Sources */,
+				BAAA6BF12CA2E7CE006252A1 /* Formatter.swift in Sources */,
 				BA311A322C4142B2001865D0 /* WelfareCollectApp.swift in Sources */,
 				BA8047D82C4EB00C00DF0673 /* InterestTheme.swift in Sources */,
 				BA8047DE2C4EB04000DF0673 /* SortOrder.swift in Sources */,
@@ -383,7 +388,6 @@
 				BA87CA8E2C4152A7008863D8 /* WelfareDetailResponse.swift in Sources */,
 				BA8047CC2C46BCDD00DF0673 /* WelfareListRequest.swift in Sources */,
 				BA87CA9C2C4173D3008863D8 /* BookmarkScreen.swift in Sources */,
-				BAAA6BEE2CA1AF5B006252A1 /* String+.swift in Sources */,
 				BA8047D42C4EAFDE00DF0673 /* LifeCycle.swift in Sources */,
 				BA8047D22C4EAED900DF0673 /* Category.swift in Sources */,
 				BA8047DA2C4EB02600DF0673 /* ServiceType.swift in Sources */,
