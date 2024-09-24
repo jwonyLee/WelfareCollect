@@ -37,6 +37,8 @@
 		BA87CA972C4172DF008863D8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA962C4172DF008863D8 /* HomeScreen.swift */; };
 		BA87CA992C4173AB008863D8 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA982C4173AB008863D8 /* SettingsScreen.swift */; };
 		BA87CA9C2C4173D3008863D8 /* BookmarkScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */; };
+		BAAA6BF12CA2E7CE006252A1 /* DateFormattable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA6BF02CA2E7CE006252A1 /* DateFormattable.swift */; };
+		BAAA6BF32CA2E80F006252A1 /* CompactToFullKoreanDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAA6BF22CA2E7F5006252A1 /* CompactToFullKoreanDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		BA87CA962C4172DF008863D8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		BA87CA982C4173AB008863D8 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		BA87CA9B2C4173D3008863D8 /* BookmarkScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkScreen.swift; sourceTree = "<group>"; };
+		BAAA6BF02CA2E7CE006252A1 /* DateFormattable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattable.swift; sourceTree = "<group>"; };
+		BAAA6BF22CA2E7F5006252A1 /* CompactToFullKoreanDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactToFullKoreanDateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 		BA311A302C4142B2001865D0 /* WelfareCollect */ = {
 			isa = PBXGroup;
 			children = (
+				BAAA6BEF2CA2E7C4006252A1 /* Utility */,
 				BA311A312C4142B2001865D0 /* WelfareCollectApp.swift */,
 				BA87CA9E2C4258B9008863D8 /* Entity */,
 				BA87CA8F2C4155D9008863D8 /* View */,
@@ -242,6 +247,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		BAAA6BEF2CA2E7C4006252A1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BAAA6BF22CA2E7F5006252A1 /* CompactToFullKoreanDateFormatter.swift */,
+				BAAA6BF02CA2E7CE006252A1 /* DateFormattable.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -354,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAA6BF32CA2E80F006252A1 /* CompactToFullKoreanDateFormatter.swift in Sources */,
 				BA87CA972C4172DF008863D8 /* HomeScreen.swift in Sources */,
 				BA8047CF2C4809CA00DF0673 /* WelfareDetailView.swift in Sources */,
 				BA8047E12C4EB08D00DF0673 /* ListOption.swift in Sources */,
@@ -363,6 +378,7 @@
 				BA8047D62C4EAFF900DF0673 /* HouseholdCondition.swift in Sources */,
 				BA311A362C4142B2001865D0 /* Item.swift in Sources */,
 				BA87CA952C416B22008863D8 /* RootView.swift in Sources */,
+				BAAA6BF12CA2E7CE006252A1 /* DateFormattable.swift in Sources */,
 				BA311A322C4142B2001865D0 /* WelfareCollectApp.swift in Sources */,
 				BA8047D82C4EB00C00DF0673 /* InterestTheme.swift in Sources */,
 				BA8047DE2C4EB04000DF0673 /* SortOrder.swift in Sources */,
@@ -543,7 +559,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.rieul.WelfareCollect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -573,7 +589,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.rieul.WelfareCollect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -590,7 +606,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.rieul.WelfareCollectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WelfareCollect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WelfareCollect";
 			};
@@ -608,7 +624,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.rieul.WelfareCollectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WelfareCollect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WelfareCollect";
 			};

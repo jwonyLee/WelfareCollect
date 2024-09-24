@@ -56,7 +56,7 @@ struct WelfareDetailResponse: Codable {
     let basfrmList: [InqplCtadrList]
 }
 
-struct InqplCtadrList: Codable {
+struct InqplCtadrList: Codable, Hashable {
     /// 복지정보관련명
     let wlfareInfoReldNm: String
     /// 복지정보관련내용

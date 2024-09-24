@@ -1,55 +1,6 @@
 import SwiftUI
 import XMLCoder
 
-public extension Color {
-    static func random(randomOpacity: Bool = false) -> Color {
-        Color(
-            red: .random(in: 0...1),
-            green: .random(in: 0...1),
-            blue: .random(in: 0...1),
-            opacity: randomOpacity ? .random(in: 0...1) : 1
-        )
-    }
-}
-
-extension Color {
-    func isLight() -> Bool {
-        return luminance() > 0.5
-    }
-}
-
-extension Color {
-    func adaptedTextColor() -> Color {
-        return isLight() ? Color.black : Color.white
-    }
-}
-
-extension Color {
-    func luminance() -> Double {
-        // 1. Convert SwiftUI Color to UIColor
-        let uiColor = UIColor(self)
-
-        // 2. Extract RGB values
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        uiColor.getRed(&red, green: &green, blue: &blue, alpha: nil)
-
-        // 3. Compute luminance.
-        return 0.2126 * Double(red) + 0.7152 * Double(green) + 0.0722 * Double(blue)
-    }
-}
-
-extension Text {
-    func contrastText(backgroundColor: Color) -> some View {
-        var r, g, b, a: CGFloat
-        (r, g, b, a) = (0, 0, 0, 0)
-        UIColor(backgroundColor).getRed(&r, green: &g, blue: &b, alpha: &a)
-        let luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b
-        return  luminance < 0.6 ? self.foregroundColor(.white) : self.foregroundColor(.black)
-    }
-}
-
 struct WelfareDetailView: View {
     var serviceId: String
     @State var detail: WelfareDetailResponse?
@@ -67,98 +18,122 @@ struct WelfareDetailView: View {
         }
     }
 
-    private let imageURL: URL? = URL(string: "https://images.unsplash.com/photo-1721069662098-f2031c2319b8?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-
-    func extractDominantColor(from image: UIImage) -> UIColor? {
-        guard let inputImage = CIImage(image: image) else { return nil }
-        let extentVector = CIVector(x: inputImage.extent.origin.x, y: inputImage.extent.origin.y, z: inputImage.extent.size.width, w: inputImage.extent.size.height)
-
-        guard let filter = CIFilter(name: "CIAreaAverage", parameters: [kCIInputImageKey: inputImage, kCIInputExtentKey: extentVector]) else { return nil }
-        guard let outputImage = filter.outputImage else { return nil }
-
-        var bitmap = [UInt8](repeating: 0, count: 4)
-        let context = CIContext(options: [.workingColorSpace: kCFNull!])
-        context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: CGRect(x: 0, y: 0, width: 1, height: 1), format: .RGBA8, colorSpace: nil)
-
-        return UIColor(red: CGFloat(bitmap[0]) / 255.0, green: CGFloat(bitmap[1]) / 255.0, blue: CGFloat(bitmap[2]) / 255.0, alpha: CGFloat(bitmap[3]) / 255.0)
-    }
-
     private func contentView(detail: WelfareDetailResponse) -> some View {
-        let color = Color.random()
-        return ZStack {
-            GeometryReader { geometry in
-                color
-                    .frame(
-                        width: geometry.size.width,
-                        height: geometry.size.height
-                    )
-            }
-
-            VStack(alignment: .leading, spacing: 24) {
+        VStack(alignment: .leading) {
+            VStack {
                 Text(detail.servNm)
                     .font(.title)
                     .bold()
-                    .foregroundStyle(color.adaptedTextColor())
 
-                HStack {
-                    Text("\(detail.ctpvNm) \(detail.sggNm ?? "")")
-                    line()
-                    Text(detail.lifeNmArray)
-                }
-                .foregroundStyle(.secondary)
-
-                HStack {
-                    VStack(alignment: .leading, spacing: 15) {
-                        Text("READS")
-                            .foregroundStyle(.secondary)
-                        Text("2.4M")
-                            .bold()
-                    }
-
-                    Spacer()
-                    line()
-                    Spacer()
-
-                    VStack(alignment: .leading, spacing: 15) {
-                        Text("READS")
-                            .foregroundStyle(.secondary)
-                        Text("2.4M")
-                            .bold()
-                    }
-
-                    Spacer()
-                    line()
-                    Spacer()
-
-                    VStack(alignment: .leading, spacing: 15) {
-                        Text("READS")
-                            .foregroundStyle(.secondary)
-                        Text("2.4M")
-                            .bold()
-                    }
-                }
-
-                Text("About \(detail.servNm)")
-                    .font(.title)
-                    .bold()
-                    .foregroundStyle(.white)
+                Spacer()
+                    .frame(height: 16)
 
                 Text(detail.servDgst)
                     .foregroundStyle(.secondary)
-                    .lineLimit(20)
             }
             .padding()
-            .padding(.vertical, 20)
-            .padding(.bottom, 60)
-            .background(.ultraThinMaterial)
-            .frame(maxHeight: .infinity, alignment: .bottom)
+
+            List {
+                Section("기본 정보") {
+                    rowView(title: "지역", description: "\(detail.ctpvNm) \(detail.sggNm ?? "")")
+                    if let startDate = CompactToFullKoreanDateFormatter.compactToFull(from: detail.enfcBgngYmd),
+                       let endDate = CompactToFullKoreanDateFormatter.compactToFull(from: detail.enfcEndYmd) {
+                        rowView(title: "시행 기간", description: "\(startDate) ~ \(endDate)")
+                    } else {
+                        rowView(title: "시행 기간", description: "\(detail.enfcBgngYmd) ~ \(detail.enfcEndYmd)")
+                    }
+                    rowView(title: "사업담당부서", description: detail.bizChrDeptNm)
+                }
+
+                Section("서비스 대상 및 분류") {
+                    rowView(title: "생애주기", description: detail.lifeNmArray)
+                    if let trgterIndvdlNmArray = detail.trgterIndvdlNmArray {
+                        rowView(title: "가구상황", description: trgterIndvdlNmArray)
+                    }
+                    if let intrsThemaNmArray = detail.intrsThemaNmArray {
+                        rowView(title: "관심주제", description: intrsThemaNmArray)
+                    }
+                    rowView(title: "지원주기", description: detail.sprtCycNm)
+                    rowView(title: "제공유형", description: detail.srvPvsnNm)
+                }
+
+                Section("서비스 내용") {
+                    rowView(title: "신청방법", description: detail.aplyMtdNm)
+                    rowView(title: "지원대상", description: detail.sprtTrgtCn)
+                    rowView(title: "선정기준", description: detail.slctCritCn)
+                    rowView(title: "급여서비스", description: detail.alwServCn)
+                    rowView(title: "신청방법 상세", description: detail.aplyMtdCn)
+                }
+
+                Section("근거 법령 목록") {
+                    ForEach(detail.baslawList, id: \.self) { item in
+                        Text(item.wlfareInfoReldNm)
+                        if let wlfareInfoReldCn = item.wlfareInfoReldCn {
+                            Text(wlfareInfoReldCn)
+                        }
+                    }
+                }
+
+                Section("서식/자료 목록") {
+                    ForEach(detail.basfrmList, id: \.self) { item in
+                        HStack {
+                            Text(item.wlfareInfoReldNm)
+                            Spacer()
+                            Button {
+                                // TODO: item.wlfareInfoReldCn 다운로드 ? 외부로 이동
+                            } label: {
+                                roundedImage(systemName: "link")
+                            }
+                        }
+                    }
+                }
+
+                Section("문의처 목록") {
+                    ForEach(detail.inqplCtadrList, id: \.self) { item in
+                        HStack {
+                            Text(item.wlfareInfoReldNm)
+                            Spacer()
+                            Button {
+                                // TODO: item.wlfareInfoReldCn 다운로드 ? 외부로 이동
+                            } label: {
+                                roundedImage(systemName: "phone.fill")
+                            }
+                        }
+                    }
+                }
+
+                Section("기타 정보") {
+                    rowView(title: "조회수", description: detail.inqNum)
+                    rowView(
+                        title: "최종수정일자",
+                        description: CompactToFullKoreanDateFormatter.compactToFull(from: detail.lastModYmd) ?? ""
+                    )
+                }
+            }
         }
-        .ignoresSafeArea()
     }
 
     private func line() -> some View {
         Rectangle()
             .frame(width: 1, height: 35)
+    }
+
+    private func rowView(
+        title: String,
+        description: String
+    ) -> some View {
+        VStack(alignment: .leading) {
+            Text(title)
+                .font(.headline)
+            Text(description)
+        }
+    }
+
+    private func roundedImage(systemName: String) -> some View {
+        Image(systemName: systemName)
+            .padding(8)
+            .background(Color.gray.opacity(0.1))
+            .clipShape(Circle())
     }
 
     private func fetchData() async {
@@ -181,6 +156,7 @@ struct WelfareDetailView: View {
             )
             #endif
         } catch {
+            // TODO: ErrorView(message: "")
             print("error ...")
         }
     }
